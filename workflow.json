@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "WhatsApp Message",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "transcript_agent",
+      "type": "Agent",
+      "label": "Transcript Assistant Agent",
+      "nodeCategory": "agent"
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Bot Response",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    {
+      "source": "input_node",
+      "target": "transcript_agent"
+    },
+    {
+      "source": "transcript_agent",
+      "target": "output_node"
+    }
+  ]
+}

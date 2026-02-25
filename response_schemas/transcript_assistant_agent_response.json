@@ -1,0 +1,22 @@
+{
+  "agent_name": "Transcript Assistant Agent",
+  "agent_id": "699efe3b25a09abf2a0825a8",
+  "description": "Conversational WhatsApp bot that receives YouTube URLs, triggers transcript extraction via custom API, stores transcripts in knowledge base, and answers user queries about stored video content including summarization and search",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "message": "string",
+    "transcript_data": "string",
+    "search_results": "string",
+    "summary": "string",
+    "action_type": "string"
+  },
+  "example_response": {
+    "message": "The main response message to the user",
+    "transcript_data": "sample",
+    "search_results": "sample",
+    "summary": "sample",
+    "action_type": "Type of action performed"
+  }
+}

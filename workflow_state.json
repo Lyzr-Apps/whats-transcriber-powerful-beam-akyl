@@ -1,0 +1,18 @@
+{
+  "agents": [
+    {
+      "name": "Transcript Assistant Agent",
+      "agent_id": "699efe3b25a09abf2a0825a8",
+      "type": "single",
+      "has_knowledge_base": true,
+      "rag_id": "699efe23c9ac7bb71c09d774"
+    }
+  ],
+  "knowledge_bases": [
+    {
+      "name": "YouTube Transcripts KB",
+      "rag_id": "699efe23c9ac7bb71c09d774",
+      "rag_name": "youtubetranscriptskb3mwh"
+    }
+  ]
+}

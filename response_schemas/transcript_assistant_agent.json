@@ -1,0 +1,56 @@
+{
+  "type": "json_schema",
+  "json_schema": {
+    "name": "TranscriptAssistantResponse",
+    "strict": true,
+    "schema": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "description": "The main response message to the user"
+        },
+        "transcript_data": {
+          "type": ["object", "null"],
+          "description": "Transcript data if a video was processed",
+          "properties": {
+            "video_title": { "type": "string" },
+            "video_url": { "type": "string" },
+            "transcript_text": { "type": "string" },
+            "word_count": { "type": "number" },
+            "processing_date": { "type": "string" },
+            "status": { "type": "string" }
+          },
+          "required": ["video_title", "video_url", "transcript_text", "word_count", "processing_date", "status"],
+          "additionalProperties": false
+        },
+        "search_results": {
+          "type": ["array", "null"],
+          "description": "Search results from knowledge base queries",
+          "items": {
+            "type": "object",
+            "properties": {
+              "video_title": { "type": "string" },
+              "video_url": { "type": "string" },
+              "snippet": { "type": "string" },
+              "relevance_score": { "type": "number" }
+            },
+            "required": ["video_title", "video_url", "snippet", "relevance_score"],
+            "additionalProperties": false
+          }
+        },
+        "summary": {
+          "type": ["string", "null"],
+          "description": "Summary of a transcript if summarization was requested"
+        },
+        "action_type": {
+          "type": "string",
+          "description": "Type of action performed: transcribe, search, summarize, list, error, greeting",
+          "enum": ["transcribe", "search", "summarize", "list", "error", "greeting"]
+        }
+      },
+      "required": ["message", "transcript_data", "search_results", "summary", "action_type"],
+      "additionalProperties": false
+    }
+  }
+}
